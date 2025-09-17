@@ -29,6 +29,6 @@ def main():
         min = temp["min"]
         max = temp["max"]
         avg = temp["sum"] / temp["counter"]
-        print(f"{city};{min};{avg:.1f};{max}")
+        print(f"{city}={min}/{avg:.1f}/{max}")
 
 main()
