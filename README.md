@@ -13,9 +13,9 @@ Vänersborg;11.7
 
 Your program should produce an output in this format:
 ```
-Nässjö;12.6;50.8;89.1
-Trollhättan;33.4;35,6;37.9
-Vänersborg;11.7;11.7;11.7
+Nässjö=12.6/50.8/89.1
+Trollhättan=33.4/35,6/37.9
+Vänersborg=11.7/11.7/11.7
 ```
 
 # Getting started
