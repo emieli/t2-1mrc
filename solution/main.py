@@ -4,13 +4,11 @@ def main():
     temp_by: dict = {}
 
     # Open the file named "measurements.txt" in read mode
-    with open("measurements.txt", "r") as file:
+    with open("measurements.txt", "r", encoding="utf8") as file:
         # Go through each line in the file
         for line in file:
-            # Each line contains a city and a temperature, separated by a semicolon
-            city, temp = line.split(";")
-            # Convert the temperature from text to a number (float)
-            temp = float(temp)
+            city, temp = line.split(";") # Each line contains a city and a temperature, separated by a semicolon
+            temp = float(temp) # Convert the temperature from text to a number (float)
 
             # If this city is not already in our dictionary, add it
             if city not in temp_by:
@@ -40,6 +38,7 @@ def main():
         max = temp["max"]  # Maximum temperature
         avg = temp["sum"] / temp["counter"]  # Average temperature
         # Print the result in the format: city=min/avg/max
+        # .1f tells python to only print the first decimal
         print(f"{city}={min}/{avg:.1f}/{max}")
 
 # Call the main function to run the program

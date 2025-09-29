@@ -38,6 +38,19 @@ If you don't have VS-code then you can type `explorer t2-1mrc` in cmd to open th
 
 You can now open `t2-1mrc\main.py` and start coding!
 
+# Windows fuckery
+The **measurements.txt** file is UTF-8 encoded. However, Python in Windows defaults to **cp1252** causing the file not to be read correctly. You can verify it like this:
+```python
+import sys, locale
+print(sys.getfilesystemencoding()) # utf-8
+print(locale.getpreferredencoding()) # cp1252
+```
+
+If you have this problem, make sure you force the file to be read as UTF-8, like this:
+```python
+with open("measurements.txt", "r", encoding="utf8") as file:
+```
+
 # Resources
 In case you get stuck, feel free to browse these resources for inspiration:
 - https://www.geeksforgeeks.org/python/read-a-file-line-by-line-in-python/
