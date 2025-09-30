@@ -1,7 +1,7 @@
 # This is the main function where the program starts
 def main():
     # Create an empty dictionary to store temperature data for each city
-    temp_by: dict = {}
+    temp_by: dict[str,dict[str,float]] = {}
 
     # Open the file named "measurements.txt" in read mode
     with open("measurements.txt", "r", encoding="utf8") as file:
