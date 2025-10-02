@@ -1,6 +1,15 @@
 class Temp:
+    """
+    Class Temp is a blueprint/template for how city temperature measurements
+    are handled. We want to keep track of the min/max/avg recorded temperatures
+    for the city and display the data in a standardized format.
+    """
+
     def __init__(self, city: str, temp: float):
-        """Create new Temp instance, containing min/max/sum values"""
+        """
+        Initialize new Temp instance; creating local variables and supplying
+        first measurement value (temp)
+        """
         self.city: str = city
         self.min: float = temp
         self.max: float = temp
@@ -21,7 +30,7 @@ class Temp:
         return f"{self.city}={self.min}/{self.avg:.1f}/{self.max}"
 
     @property
-    def avg(self) -> int:
+    def avg(self) -> float:
         """
         Return average value by dividing the sum of all
         measurements by the number of recorded measurements
